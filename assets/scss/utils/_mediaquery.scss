@@ -1,0 +1,16 @@
+$breakpoints: (
+  "mobile": 768px,
+  "tablet": 1024px,
+  "desktop": 1200px,
+);
+
+@mixin mq($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $value: map-get($breakpoints, $breakpoint);
+    @media (max-width: #{$value}) {
+      @content;
+    }
+  } @else {
+    @warn "No existe el breakpoint: #{$breakpoint}";
+  }
+}

@@ -1,0 +1,70 @@
+// Componentes base
+@use '../utils/variables' as *;
+
+@use '../utils/mixins' as mixins;
+
+.btn-cta {
+  @include mixins.boton-estilo;
+  }
+
+
+  // Botón hover index //
+.btn-cta {
+  display: inline-block;
+  background-color: #5ba3d1;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #4795c4;
+  }
+}
+
+
+// estilos botones nav //
+
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-weight: bold;
+  justify-content: flex-start;
+}
+
+nav ul li a {
+  color: #000000;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  font-size: 18px; /* aumento/zoom al apoyar el mouse */
+  color: #000000;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #5ba3d1;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}

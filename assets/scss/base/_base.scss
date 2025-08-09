@@ -1,0 +1,33 @@
+@use '../utils/variables' as *;
+
+@use 'sass:color';
+
+.btn-cta {
+  display: inline-block;
+  background-color: $color-principal;
+  color: $color-white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border: 2px solid transparent;
+  text-align: center;
+
+  &:hover {
+    background-color: color.adjust($color-principal, $lightness: -10%);
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $color-white;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.4);
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
+}

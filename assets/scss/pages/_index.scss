@@ -1,0 +1,38 @@
+
+.main-index {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem;
+  padding: 2rem;
+
+
+.Logo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+
+  img {
+    max-width: auto;
+    height: auto;
+    border: 0px solid #a5d6a7;
+  }
+}
+
+   // Diseño responsive para móviles
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .formulario {
+      width: 100%;
+    }
+
+    .Logo {
+      max-width: 100%;
+    }
+  }
+}
+
+

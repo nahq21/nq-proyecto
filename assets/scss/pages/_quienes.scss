@@ -1,0 +1,42 @@
+ .main-quienes {
+    padding: 60px 20px; 
+    padding-bottom: 100px;
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+     }
+
+
+  .main-quienes h2 {
+   font-size: 35px;
+    text-align: center;
+
+    &::after {
+      margin-left: auto;
+      margin-right: auto;
+  }
+}
+
+ 
+  .main-quienes p {
+    text-align: justify;
+    padding: 0 10px;
+    margin-bottom: 60px; /* <- Aumentá esto si aún se superpone con el footer */
+  }
+
+  #carouselQuienes {
+    flex: 1;
+    margin-bottom: 30px;
+    max-width: auto;
+  }
+
+   .texto-quienes {
+    flex: 1;
+    max-width: 500px;
+  }
+
+

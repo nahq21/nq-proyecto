@@ -5,52 +5,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Estudio Jurídico Aragón </title>
-  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="/assets/css/estilos.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
-      <header>
-      <img src="imagenes/logo_estudio.jpg" alt="Logo del estudio">
-      <nav>
-        <ul>
-          <li> <a href="index.html">Inicio</a></li>
-          <li><a href="pages/quienes_somos.html">Quiénes somos</a></li>
-          <li> <a href="pages/nuestros_servicios.html">Nuestros servicios</a></li>
-          <li><a href="pages/casos_exitosos.html">Casos exitosos</a></li>
-          <li><a href="pages/contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
-    </header>
+  <header class="header">
+  <img src="imagenes/logo_estudio.jpg" alt="Logo del estudio" class="header__logo">
 
-    <section class="hero">
-      <div class="hero-texto">
-        <h1>Defendemos tus derechos</h1>
-        <p>Más de 10 años brindando soluciones legales con compromiso y cercanía.</p>
-        <a href="pages/contacto.html" class="btn-cta">Solicitá tu consulta</a>
-      </div>
-      <div class="hero-imagen">
-        <img src="imagenes/abogada_hero.jpg" alt="Abogada asesorando a cliente">
-      </div>
-    </section>
+  <button class="header__toggle" aria-label="Abrir menú">
+    &#9776;
+  </button>
 
-    <main class="main-index">
-      <div class="Logo central">
-        <img src="imagenes/logo_index.jpg" alt="Imagen del estudio">
-      </div>
+  <nav class="header__nav">
+    <ul class="header__nav-list">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="pages/quienes_somos.html">Quiénes somos</a></li>
+      <li><a href="pages/nuestros_servicios.html">Nuestros servicios</a></li>
+      <li><a href="pages/casos_exitosos.html">Casos exitosos</a></li>
+      <li><a href="pages/contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
 
-      <div class="formulario">
-        <h2>CONTACTANOS</h2>
-        <form>
-          <label for="nombre">Nombre y Apellido</label>
-          <input type="text" id="nombre" name="nombre" required>
+  <section class="hero">
+    <div class="hero-texto">
+      <h1>Defendemos tus derechos</h1>
+      <p>Más de 10 años brindando soluciones legales con compromiso y cercanía.</p>
+      <a href="pages/contacto.html" class="btn-cta">Solicitá tu consulta</a>
+    </div>
+    <div class="hero-imagen">
+      <img src="imagenes/abogada_hero.jpg" alt="Abogada asesorando a cliente">
+    </div>
+  </section>
 
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
+  <main class="main-index">
+    <div class="Logo central">
+      <img src="imagenes/logo_index.jpg" alt="Imagen del estudio">
+    </div>
 
-          <label for="telefono">Teléfono</label>
-          <input type="tel" id="telefono" name="telefono" required>
+    <div class="formulario">
+      <h2>CONTACTANOS</h2>
+      <form>
+        <label for="nombre">Nombre y Apellido</label>
+        <input type="text" id="nombre" name="nombre" required>
 
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" required>
+
+        <div class="mb-3">
           <label for="area">Área de trabajo</label>
           <select id="area" name="area" required>
             <option value="">Seleccione un área</option>
@@ -60,47 +66,55 @@
             <option value="familia">Derecho de Familia</option>
             <option value="mercantil">Derecho Mercantil</option>
           </select>
+        </div>
 
-          <button type="submit">Enviar</button>
-        </form>
-      </div>
-    </main>
+        <button type="submit" class="btn-cta">Enviar</button>
+      </form>
+    </div>
+  </main>
 
 
 
 
-    <div class="whatsapp">
-      <a href="https://wa.me/34123456789" target="_blank">Escríbenos por WhatsApp</a>
+  <div class="whatsapp">
+    <a href="https://wa.me/34123456789" target="_blank">Escríbenos por WhatsApp</a>
+  </div>
+
+
+  <footer>
+    <div class="indice_pie">
+      <ul class="menu-footer">
+        <li>🏠 <a href="index.html">Inicio</a></li>
+        <li>👤 <a href="quienes_somos.html">Quiénes somos</a></li>
+        <li>📚 <a href="nuestros_servicios.html">Nuestros servicios</a></li>
+        <li>✅ <a href="casos_exitosos.html">Casos exitosos</a></li>
+        <li>📞 <a href="contacto.html">Contacto</a></li>
+      </ul>
     </div>
 
-
-    <footer>
-      <div class="indice_pie">
-        <ul class="menu-footer">
-          <li>🏠 <a href="index.html">Inicio</a></li>
-          <li>👤 <a href="quienes_somos.html">Quiénes somos</a></li>
-          <li>📚 <a href="nuestros_servicios.html">Nuestros servicios</a></li>
-          <li>✅ <a href="casos_exitosos.html">Casos exitosos</a></li>
-          <li>📞 <a href="contacto.html">Contacto</a></li>
-        </ul>
-      </div>
-
-      <div class="contacto_pie">
-        <h2>Contacto</h2>
-        <ul class="lista-contacto">
-          <li><strong>Tel: 444-444-444</strong></li>
-          <li><strong>Correo electrónico: a.estudio@gmail.com</strong></li>
-          <li><strong>Dirección: Av. Algun Lugar 1234, Otro Lugar</strong></li>
-        </ul>
-      </div>
-    </footer>
-
-    <div class="pie-final">
-      <p>Estudio Jurídico Aragón | Desde 2012 acompañando a nuestros clientes con compromiso y excelencia.</p>
+    <div class="contacto_pie">
+      <h2>Contacto</h2>
+      <ul class="lista-contacto">
+        <li><strong>Tel: 444-444-444</strong></li>
+        <li><strong>Correo electrónico: a.estudio@gmail.com</strong></li>
+        <li><strong>Dirección: Av. Algun Lugar 1234, Otro Lugar</strong></li>
+      </ul>
     </div>
+  </footer>
+
+  <div class="pie-final">
+    <p>Estudio Jurídico Aragón | Desde 2012 acompañando a nuestros clientes con compromiso y excelencia.</p>
+  </div>
 
 
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('main-menu');
 
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
+</script>
 
 </body>
 

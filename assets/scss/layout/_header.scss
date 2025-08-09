@@ -1,0 +1,71 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+@use '../utils/mediaquery' as *;
+
+@include mq ("mobile");
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #a5d6a7;
+
+  &__logo {
+    width: 150px;
+  }
+
+  &__toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+
+  &__nav {
+    &-list {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+
+      a {
+        text-decoration:solid;
+        color: $color-white;
+
+        &:hover {
+          color: $color-secundario;
+        }
+      }
+    }
+
+    &.active {
+      display: block;
+    }
+  }
+
+  // Media query móvil
+  @include mq (mobile) {
+    flex-wrap: wrap;
+
+    &__toggle {
+      display: block;
+    }
+
+    &__nav {
+      width: 100%;
+      display: none;
+
+      &.active {
+        display: block;
+      }
+
+      &-list {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+    }
+  }
+}

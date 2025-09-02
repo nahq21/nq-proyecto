@@ -7,7 +7,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quienes somos</title>
+      <meta name="description" content="Asesoramiento legal en derecho civil, derecho comercial y derecho penal">
+  <meta name="keywords" content="Derecho, Derecho Civil, Derecho Comercial, Derecho Penal, Asesoramiento, Abogado">
+    <title>¿Quiénes somos?</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -18,11 +20,13 @@
     <header class="header">
         <img src="../imagenes/logo_estudio.jpg" alt="Logo del estudio" class="header__logo">
        
-        <button class="header__toggle" aria-label="Abrir menú">
-            &#9776;
-        </button>
+        <button id="menu-toggle"
+          class="header__toggle"
+          aria-label="Abrir menú"
+          aria-controls="main-menu"
+          aria-expanded="false">☰</button>
 
-        <nav class="header__nav">
+  <nav id="main-menu" class="header__nav" >
             <ul class="header__nav-list">
                 <li> <a href="../index.html">Inicio</a></li>
                 <li><a href="quienes_somos.html">Quiénes somos</a></li>
@@ -33,7 +37,7 @@
         </nav>
     </header>
 
-<title>¿Quienes somos?</title>
+
 
     <main class="main-quienes">
         <section class="container py-5">
@@ -65,7 +69,7 @@
 
                 <div class="col-lg-6">
                     <div class="card bg-light border-0 shadow-sm p-4">
-                        <h2 class="mb-4">¿Quiénes somos?</h2>
+                        <h1 class="mb-4">¿Quiénes somos?</h1>
                         <p>
                             Somos un equipo apasionado por la justicia y comprometido con brindar asesoría legal
                             clara,
@@ -123,6 +127,23 @@
     <div class="whatsapp">
         <a href="https://wa.me/34123456789" target="_blank">Escríbenos por WhatsApp</a>
     </div>
+
+  <script>
+  (function () {
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('main-menu');
+    if (!toggle || !menu) return;
+
+    toggle.addEventListener('click', function () {
+      const open = menu.classList.toggle('active');
+      menu.toggleAttribute('hidden', !open);
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+  })();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 
 </body>
 

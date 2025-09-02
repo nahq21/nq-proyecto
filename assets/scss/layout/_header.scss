@@ -15,7 +15,7 @@
     width: 150px;
   }
 
-  &__toggle {
+  .header__toggle {
     display: none;
     background: none;
     border: none;
@@ -25,13 +25,15 @@
   }
 
   &__nav {
+    display: block;
+
     &-list {
       display: flex;
       gap: 2rem;
       list-style: none;
 
       a {
-        text-decoration:solid;
+        text-decoration: solid;
         color: $color-white;
 
         &:hover {

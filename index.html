@@ -4,21 +4,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Estudio Jurídico Aragón </title>
+  <meta name="description" content="Asesoramiento legal en derecho civil, derecho comercial y derecho penal">
+  <meta name="keywords" content="Derecho, Defensa, Derecho Civil, Derecho Comercial, Derecho Penal, Asesoramiento, Abogado">
+  <title>Estudio Jurídico Aragón</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/estilos.css">
+    <link rel="stylesheet" href="assets/css/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
   <header class="header">
   <img src="imagenes/logo_estudio.jpg" alt="Logo del estudio" class="header__logo">
+  
 
-  <button class="header__toggle" aria-label="Abrir menú">
-    &#9776;
-  </button>
+<button id="menu-toggle"
+          class="header__toggle"
+          aria-label="Abrir menú"
+          aria-controls="main-menu"
+          aria-expanded="false">☰</button>
 
-  <nav class="header__nav">
+  <nav id="main-menu" class="header__nav">
     <ul class="header__nav-list">
       <li><a href="index.html">Inicio</a></li>
       <li><a href="pages/quienes_somos.html">Quiénes somos</a></li>
@@ -31,8 +36,9 @@
 
   <section class="hero">
     <div class="hero-texto">
-      <h1>Defendemos tus derechos</h1>
-      <p>Más de 10 años brindando soluciones legales con compromiso y cercanía.</p>
+      <h1>Estudio Jurídico Aragón</h1>
+      <h2>Defendemos tus derechos</h2>
+       <p>Más de 10 años brindando soluciones legales con compromiso y cercanía.</p>
       <a href="pages/contacto.html" class="btn-cta">Solicitá tu consulta</a>
     </div>
     <div class="hero-imagen">
@@ -109,12 +115,17 @@
 
 
 <script>
-  const toggle = document.getElementById('menu-toggle');
-  const menu = document.getElementById('main-menu');
+  (function () {
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('main-menu');
+    if (!toggle || !menu) return;
 
-  toggle.addEventListener('click', () => {
-    menu.classList.toggle('active');
-  });
+    toggle.addEventListener('click', function () {
+      const open = menu.classList.toggle('active');
+      menu.toggleAttribute('hidden', !open);
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+  })();
 </script>
 
 </body>
